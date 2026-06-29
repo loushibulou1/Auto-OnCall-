@@ -409,6 +409,3 @@ netstat -ano | findstr :8004  # Monitor MCP
 - [LangGraph Plan-Execute](https://langchain-ai.github.io/langgraph/tutorials/plan-and-execute/)
 - [阿里云 DashScope](https://dashscope.aliyun.com/)
 - [MCP 协议](https://modelcontextprotocol.io/)
-
-
-MIT License
