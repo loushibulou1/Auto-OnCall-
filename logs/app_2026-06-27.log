@@ -1,0 +1,63 @@
+2026-06-27 07:38:56 | INFO     | vector_embedding_service.__init__:46 | DashScope Embeddings 初始化完成 - 模型: text-embedding-v4, 维度: 1024, API Key: sk-819c4...be82
+2026-06-27 07:38:56 | INFO     | milvus_client.connect:77 | 正在连接到 Milvus: localhost:19530
+2026-06-27 07:38:56 | INFO     | milvus_client.connect:91 | 成功连接到 Milvus
+2026-06-27 07:38:56 | INFO     | milvus_client.connect:99 | collection 'biz' 已存在
+2026-06-27 07:38:56 | INFO     | milvus_client.connect:123 | 向量维度匹配: 1024
+2026-06-27 07:38:56 | INFO     | milvus_client._load_collection:225 | Collection 'biz' 已加载
+2026-06-27 07:38:56 | INFO     | vector_store_manager._initialize_vector_store:54 | VectorStore 初始化成功: localhost:19530, collection: biz
+2026-06-27 07:38:57 | INFO     | rag_agent_service.__init__:115 | RAG Agent 服务初始化完成 (ChatQwen), model=qwen-max, streaming=True
+2026-06-27 07:38:57 | INFO     | document_splitter_service.__init__:39 | 文档分割服务初始化完成, chunk_size=800, secondary_chunk_size=1600, overlap=100
+2026-06-27 07:38:57 | INFO     | vector_index_service.__init__:65 | 向量索引服务初始化完成
+2026-06-27 07:38:57 | INFO     | aiops_service._build_graph:31 | 构建工作流图...
+2026-06-27 07:38:57 | INFO     | aiops_service._build_graph:78 | 工作流图构建完成
+2026-06-27 07:38:57 | INFO     | aiops_service.__init__:27 | Plan-Execute-Replan Service 初始化完成
+2026-06-27 07:38:57 | INFO     | main.lifespan:23 | ============================================================
+2026-06-27 07:38:57 | INFO     | main.lifespan:24 | 🚀 SuperBizAgent v1.0.0 启动中...
+2026-06-27 07:38:57 | INFO     | main.lifespan:25 | 📝 环境: 开发
+2026-06-27 07:38:57 | INFO     | main.lifespan:26 | 🌐 监听地址: http://0.0.0.0:9900
+2026-06-27 07:38:57 | INFO     | main.lifespan:27 | 📚 API 文档: http://0.0.0.0:9900/docs
+2026-06-27 07:38:57 | INFO     | main.lifespan:30 | 🔌 正在连接 Milvus...
+2026-06-27 07:38:57 | INFO     | main.lifespan:32 | ✅ Milvus 连接成功
+2026-06-27 07:38:57 | INFO     | main.lifespan:34 | ============================================================
+2026-06-27 07:41:16 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: 你好
+2026-06-27 07:41:16 | INFO     | mcp_client.get_mcp_client:147 | 初始化全局 MCP 客户端...
+2026-06-27 07:41:16 | INFO     | mcp_client.get_mcp_client:153 | 全局 MCP 客户端初始化完成
+2026-06-27 07:41:22 | WARNING  | rag_agent_service._initialize_agent:133 | MCP 工具加载失败，将仅使用本地工具继续运行:
+unhandled errors in a TaskGroup (1 sub-exception)
+  [0] HTTPStatusError: Server error '502 Bad Gateway' for url 'http://localhost:8003/mcp'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+2026-06-27 07:41:22 | INFO     | rag_agent_service._initialize_agent:154 | 可用工具列表: retrieve_knowledge, get_current_time, query_prometheus_alerts
+2026-06-27 07:41:22 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: 你好
+2026-06-27 07:41:23 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:41:23 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:42:27 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: 帮我检查一下日志
+2026-06-27 07:42:27 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: 帮我检查一下日志
+2026-06-27 07:42:33 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:42:33 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:42:52 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: 昨天的日志给我
+2026-06-27 07:42:52 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: 昨天的日志给我
+2026-06-27 07:43:01 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:43:01 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:43:23 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: 给我监控一下目前系统有没有错误
+2026-06-27 07:43:23 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: 给我监控一下目前系统有没有错误
+2026-06-27 07:43:25 | INFO     | query_metrics_alerts.query_prometheus_alerts_api:71 | Querying Prometheus alerts: http://127.0.0.1:9090/api/v1/alerts
+2026-06-27 07:43:37 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:43:37 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:44:31 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: cpu快满了，怎么办
+2026-06-27 07:44:31 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: cpu快满了，怎么办
+2026-06-27 07:44:45 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:44:45 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:45:05 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: 你的回答是基于rag吗
+2026-06-27 07:45:05 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: 你的回答是基于rag吗
+2026-06-27 07:45:11 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:45:11 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:45:23 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: 王力宏是谁
+2026-06-27 07:45:23 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: 王力宏是谁
+2026-06-27 07:45:24 | INFO     | knowledge_tool.retrieve_knowledge:26 | 知识检索工具被调用: query='王力宏是谁'
+2026-06-27 07:45:24 | INFO     | knowledge_tool.retrieve_knowledge:43 | 检索到 3 个相关文档
+2026-06-27 07:45:31 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:45:31 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成
+2026-06-27 07:46:12 | INFO     | chat.chat:38 | [会话 session_mgu4o2zw1_1782517170160] 收到快速对话请求: CPU使用率过高告警处理方案
+2026-06-27 07:46:12 | INFO     | rag_agent_service.query:204 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 收到查询（非流式）: CPU使用率过高告警处理方案
+2026-06-27 07:46:50 | INFO     | rag_agent_service.query:238 | [会话 session_mgu4o2zw1_1782517170160] RAG Agent 查询完成（非流式）
+2026-06-27 07:46:50 | INFO     | chat.chat:44 | [会话 session_mgu4o2zw1_1782517170160] 快速对话完成

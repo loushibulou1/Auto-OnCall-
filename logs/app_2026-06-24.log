@@ -1,0 +1,150 @@
+2026-06-24 21:32:01 | INFO     | vector_embedding_service.__init__:46 | DashScope Embeddings 初始化完成 - 模型: text-embedding-v4, 维度: 1024, API Key: sk-819c4...be82
+2026-06-24 21:32:01 | INFO     | milvus_client.connect:77 | 正在连接到 Milvus: localhost:19530
+2026-06-24 21:32:01 | INFO     | milvus_client.connect:91 | 成功连接到 Milvus
+2026-06-24 21:32:01 | INFO     | milvus_client.connect:95 | collection 'biz' 不存在，正在创建...
+2026-06-24 21:32:02 | INFO     | milvus_client._create_index:208 | 成功为 vector 字段创建索引
+2026-06-24 21:32:02 | INFO     | milvus_client.connect:97 | 成功创建 collection 'biz'
+2026-06-24 21:32:02 | INFO     | milvus_client._load_collection:223 | 成功加载 collection 'biz'
+2026-06-24 21:32:02 | INFO     | vector_store_manager._initialize_vector_store:54 | VectorStore 初始化成功: localhost:19530, collection: biz
+2026-06-24 21:32:03 | INFO     | rag_agent_service.__init__:115 | RAG Agent 服务初始化完成 (ChatQwen), model=qwen-max, streaming=True
+2026-06-24 21:32:04 | INFO     | document_splitter_service.__init__:39 | 文档分割服务初始化完成, chunk_size=800, secondary_chunk_size=1600, overlap=100
+2026-06-24 21:32:04 | INFO     | vector_index_service.__init__:65 | 向量索引服务初始化完成
+2026-06-24 21:32:04 | INFO     | aiops_service._build_graph:31 | 构建工作流图...
+2026-06-24 21:32:04 | INFO     | aiops_service._build_graph:78 | 工作流图构建完成
+2026-06-24 21:32:04 | INFO     | aiops_service.__init__:27 | Plan-Execute-Replan Service 初始化完成
+2026-06-24 21:32:04 | INFO     | main.lifespan:23 | ============================================================
+2026-06-24 21:32:04 | INFO     | main.lifespan:24 | 🚀 SuperBizAgent v1.0.0 启动中...
+2026-06-24 21:32:04 | INFO     | main.lifespan:25 | 📝 环境: 开发
+2026-06-24 21:32:04 | INFO     | main.lifespan:26 | 🌐 监听地址: http://0.0.0.0:9900
+2026-06-24 21:32:04 | INFO     | main.lifespan:27 | 📚 API 文档: http://0.0.0.0:9900/docs
+2026-06-24 21:32:04 | INFO     | main.lifespan:30 | 🔌 正在连接 Milvus...
+2026-06-24 21:32:04 | INFO     | main.lifespan:32 | ✅ Milvus 连接成功
+2026-06-24 21:32:04 | INFO     | main.lifespan:34 | ============================================================
+2026-06-24 21:38:18 | INFO     | file.upload_file:68 | 文件上传成功: uploads\cpu_high_usage.md
+2026-06-24 21:38:18 | INFO     | file.upload_file:72 | 开始为上传文件创建向量索引: uploads\cpu_high_usage.md
+2026-06-24 21:38:18 | INFO     | vector_index_service.index_single_file:147 | 开始索引文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\cpu_high_usage.md
+2026-06-24 21:38:18 | INFO     | vector_index_service.index_single_file:152 | 读取文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\cpu_high_usage.md, 内容长度: 1891 字符
+2026-06-24 21:38:18 | INFO     | vector_store_manager.delete_by_source:116 | 删除文件旧数据: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/cpu_high_usage.md, 删除数量: 0
+2026-06-24 21:38:18 | INFO     | document_splitter_service.split_markdown:76 | Markdown 分割完成: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/cpu_high_usage.md -> 3 个分片
+2026-06-24 21:38:18 | INFO     | vector_index_service.index_single_file:160 | 文档分割完成: uploads\cpu_high_usage.md -> 3 个分片
+2026-06-24 21:38:18 | INFO     | vector_embedding_service.embed_documents:72 | 批量嵌入 3 个文档
+2026-06-24 21:38:19 | INFO     | vector_store_manager.add_documents:86 | 批量添加 3 个文档到 VectorStore 完成, 耗时: 0.54秒, 平均: 0.18秒/个
+2026-06-24 21:38:19 | INFO     | vector_index_service.index_single_file:165 | 文件索引完成: uploads\cpu_high_usage.md, 共 3 个分片
+2026-06-24 21:38:19 | INFO     | file.upload_file:74 | 向量索引创建成功: uploads\cpu_high_usage.md
+2026-06-24 21:38:21 | INFO     | file.upload_file:68 | 文件上传成功: uploads\disk_high_usage.md
+2026-06-24 21:38:21 | INFO     | file.upload_file:72 | 开始为上传文件创建向量索引: uploads\disk_high_usage.md
+2026-06-24 21:38:21 | INFO     | vector_index_service.index_single_file:147 | 开始索引文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\disk_high_usage.md
+2026-06-24 21:38:21 | INFO     | vector_index_service.index_single_file:152 | 读取文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\disk_high_usage.md, 内容长度: 4546 字符
+2026-06-24 21:38:21 | INFO     | vector_store_manager.delete_by_source:116 | 删除文件旧数据: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/disk_high_usage.md, 删除数量: 0
+2026-06-24 21:38:21 | INFO     | document_splitter_service.split_markdown:76 | Markdown 分割完成: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/disk_high_usage.md -> 6 个分片
+2026-06-24 21:38:21 | INFO     | vector_index_service.index_single_file:160 | 文档分割完成: uploads\disk_high_usage.md -> 6 个分片
+2026-06-24 21:38:21 | INFO     | vector_embedding_service.embed_documents:72 | 批量嵌入 6 个文档
+2026-06-24 21:38:22 | INFO     | vector_store_manager.add_documents:86 | 批量添加 6 个文档到 VectorStore 完成, 耗时: 0.62秒, 平均: 0.10秒/个
+2026-06-24 21:38:22 | INFO     | vector_index_service.index_single_file:165 | 文件索引完成: uploads\disk_high_usage.md, 共 6 个分片
+2026-06-24 21:38:22 | INFO     | file.upload_file:74 | 向量索引创建成功: uploads\disk_high_usage.md
+2026-06-24 21:38:24 | INFO     | file.upload_file:68 | 文件上传成功: uploads\memory_high_usage.md
+2026-06-24 21:38:24 | INFO     | file.upload_file:72 | 开始为上传文件创建向量索引: uploads\memory_high_usage.md
+2026-06-24 21:38:24 | INFO     | vector_index_service.index_single_file:147 | 开始索引文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\memory_high_usage.md
+2026-06-24 21:38:24 | INFO     | vector_index_service.index_single_file:152 | 读取文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\memory_high_usage.md, 内容长度: 2899 字符
+2026-06-24 21:38:24 | INFO     | vector_store_manager.delete_by_source:116 | 删除文件旧数据: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/memory_high_usage.md, 删除数量: 0
+2026-06-24 21:38:24 | INFO     | document_splitter_service.split_markdown:76 | Markdown 分割完成: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/memory_high_usage.md -> 4 个分片
+2026-06-24 21:38:24 | INFO     | vector_index_service.index_single_file:160 | 文档分割完成: uploads\memory_high_usage.md -> 4 个分片
+2026-06-24 21:38:24 | INFO     | vector_embedding_service.embed_documents:72 | 批量嵌入 4 个文档
+2026-06-24 21:38:24 | INFO     | vector_store_manager.add_documents:86 | 批量添加 4 个文档到 VectorStore 完成, 耗时: 0.37秒, 平均: 0.09秒/个
+2026-06-24 21:38:24 | INFO     | vector_index_service.index_single_file:165 | 文件索引完成: uploads\memory_high_usage.md, 共 4 个分片
+2026-06-24 21:38:24 | INFO     | file.upload_file:74 | 向量索引创建成功: uploads\memory_high_usage.md
+2026-06-24 21:38:26 | INFO     | file.upload_file:68 | 文件上传成功: uploads\service_unavailable.md
+2026-06-24 21:38:26 | INFO     | file.upload_file:72 | 开始为上传文件创建向量索引: uploads\service_unavailable.md
+2026-06-24 21:38:26 | INFO     | vector_index_service.index_single_file:147 | 开始索引文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\service_unavailable.md
+2026-06-24 21:38:26 | INFO     | vector_index_service.index_single_file:152 | 读取文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\service_unavailable.md, 内容长度: 4052 字符
+2026-06-24 21:38:27 | INFO     | vector_store_manager.delete_by_source:116 | 删除文件旧数据: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/service_unavailable.md, 删除数量: 0
+2026-06-24 21:38:27 | INFO     | document_splitter_service.split_markdown:76 | Markdown 分割完成: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/service_unavailable.md -> 4 个分片
+2026-06-24 21:38:27 | INFO     | vector_index_service.index_single_file:160 | 文档分割完成: uploads\service_unavailable.md -> 4 个分片
+2026-06-24 21:38:27 | INFO     | vector_embedding_service.embed_documents:72 | 批量嵌入 4 个文档
+2026-06-24 21:38:27 | INFO     | vector_store_manager.add_documents:86 | 批量添加 4 个文档到 VectorStore 完成, 耗时: 0.50秒, 平均: 0.13秒/个
+2026-06-24 21:38:27 | INFO     | vector_index_service.index_single_file:165 | 文件索引完成: uploads\service_unavailable.md, 共 4 个分片
+2026-06-24 21:38:27 | INFO     | file.upload_file:74 | 向量索引创建成功: uploads\service_unavailable.md
+2026-06-24 21:38:29 | INFO     | file.upload_file:68 | 文件上传成功: uploads\slow_response.md
+2026-06-24 21:38:29 | INFO     | file.upload_file:72 | 开始为上传文件创建向量索引: uploads\slow_response.md
+2026-06-24 21:38:29 | INFO     | vector_index_service.index_single_file:147 | 开始索引文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\slow_response.md
+2026-06-24 21:38:29 | INFO     | vector_index_service.index_single_file:152 | 读取文件: D:\PythonProject\OnCall\super_biz_agent_py-release-2026-05-17\uploads\slow_response.md, 内容长度: 3631 字符
+2026-06-24 21:38:30 | INFO     | vector_store_manager.delete_by_source:116 | 删除文件旧数据: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/slow_response.md, 删除数量: 0
+2026-06-24 21:38:30 | INFO     | document_splitter_service.split_markdown:76 | Markdown 分割完成: D:/PythonProject/OnCall/super_biz_agent_py-release-2026-05-17/uploads/slow_response.md -> 4 个分片
+2026-06-24 21:38:30 | INFO     | vector_index_service.index_single_file:160 | 文档分割完成: uploads\slow_response.md -> 4 个分片
+2026-06-24 21:38:30 | INFO     | vector_embedding_service.embed_documents:72 | 批量嵌入 4 个文档
+2026-06-24 21:38:30 | INFO     | vector_store_manager.add_documents:86 | 批量添加 4 个文档到 VectorStore 完成, 耗时: 0.44秒, 平均: 0.11秒/个
+2026-06-24 21:38:30 | INFO     | vector_index_service.index_single_file:165 | 文件索引完成: uploads\slow_response.md, 共 4 个分片
+2026-06-24 21:38:30 | INFO     | file.upload_file:74 | 向量索引创建成功: uploads\slow_response.md
+2026-06-24 21:43:17 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 你好
+2026-06-24 21:43:17 | INFO     | mcp_client.get_mcp_client:147 | 初始化全局 MCP 客户端...
+2026-06-24 21:43:17 | INFO     | mcp_client.get_mcp_client:153 | 全局 MCP 客户端初始化完成
+2026-06-24 21:43:23 | WARNING  | rag_agent_service._initialize_agent:133 | MCP 工具加载失败，将仅使用本地工具继续运行:
+unhandled errors in a TaskGroup (1 sub-exception)
+  [0] HTTPStatusError: Server error '502 Bad Gateway' for url 'http://localhost:8003/mcp'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502
+2026-06-24 21:43:23 | INFO     | rag_agent_service._initialize_agent:154 | 可用工具列表: retrieve_knowledge, get_current_time, query_prometheus_alerts
+2026-06-24 21:43:23 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 你好
+2026-06-24 21:43:24 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:43:24 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:43:56 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 我刚刚说了什么
+2026-06-24 21:43:56 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 我刚刚说了什么
+2026-06-24 21:43:58 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:43:58 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:44:21 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 我的上一句话是什么
+2026-06-24 21:44:21 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 我的上一句话是什么
+2026-06-24 21:44:29 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:44:29 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:45:08 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 你又记忆功能吗
+2026-06-24 21:45:08 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 你又记忆功能吗
+2026-06-24 21:45:12 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:45:12 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:45:35 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 你又记忆功能吗
+2026-06-24 21:45:35 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 你又记忆功能吗
+2026-06-24 21:45:44 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:45:44 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:45:59 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 我刚刚说了什么吗
+2026-06-24 21:45:59 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 我刚刚说了什么吗
+2026-06-24 21:46:05 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:46:05 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:46:31 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小明有一个小狗
+2026-06-24 21:46:31 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小明有一个小狗
+2026-06-24 21:46:34 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:46:34 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:46:50 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小红有两个小狗
+2026-06-24 21:46:50 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小红有两个小狗
+2026-06-24 21:46:53 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:46:53 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:47:07 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小红和小明有什么
+2026-06-24 21:47:07 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小红和小明有什么
+2026-06-24 21:47:11 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:47:11 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:47:29 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小红和小明有什么
+2026-06-24 21:47:29 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小红和小明有什么
+2026-06-24 21:47:32 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:47:32 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:48:37 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小明和小红有什么？
+2026-06-24 21:48:37 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小明和小红有什么？
+2026-06-24 21:48:40 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:48:40 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:49:00 | INFO     | rag_agent_service.clear_session:400 | 已清除会话历史: string
+2026-06-24 21:49:00 | INFO     | chat.clear_session:185 | 清空会话: string, 结果: True
+2026-06-24 21:49:06 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小明和小红有什么？
+2026-06-24 21:49:06 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小明和小红有什么？
+2026-06-24 21:49:09 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:49:09 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:49:14 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小明和小红有什么？
+2026-06-24 21:49:14 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小明和小红有什么？
+2026-06-24 21:49:16 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:49:16 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:49:45 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小明有什么？
+2026-06-24 21:49:45 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小明有什么？
+2026-06-24 21:49:47 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:49:47 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
+2026-06-24 21:50:19 | INFO     | rag_agent_service.clear_session:400 | 已清除会话历史: session-123
+2026-06-24 21:50:19 | INFO     | chat.clear_session:185 | 清空会话: session-123, 结果: True
+2026-06-24 21:50:20 | INFO     | rag_agent_service.clear_session:400 | 已清除会话历史: session-123
+2026-06-24 21:50:20 | INFO     | chat.clear_session:185 | 清空会话: session-123, 结果: True
+2026-06-24 21:50:28 | INFO     | chat.chat:38 | [会话 session-123] 收到快速对话请求: 小明有什么？
+2026-06-24 21:50:28 | INFO     | rag_agent_service.query:204 | [会话 session-123] RAG Agent 收到查询（非流式）: 小明有什么？
+2026-06-24 21:50:29 | INFO     | rag_agent_service.query:238 | [会话 session-123] RAG Agent 查询完成（非流式）
+2026-06-24 21:50:29 | INFO     | chat.chat:44 | [会话 session-123] 快速对话完成
