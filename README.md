@@ -410,7 +410,5 @@ netstat -ano | findstr :8004  # Monitor MCP
 - [阿里云 DashScope](https://dashscope.aliyun.com/)
 - [MCP 协议](https://modelcontextprotocol.io/)
 
-## 📄 许可证
-author： chief
 
 MIT License
